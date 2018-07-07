@@ -1,6 +1,7 @@
 import { Subject, Observer, Observable } from 'rxjs/Rx';
 
 export class WebsocketService {
+
   public createWebsocket(): Subject<MessageEvent> {
     let socket = new WebSocket('wss://echo.websocket.org');
     let observable = Observable.create((observer: Observer<MessageEvent>) => {
@@ -9,6 +10,7 @@ export class WebsocketService {
       socket.onclose = observer.complete.bind(observer);
       return socket.close.bind(socket);
     });
+
     let observer = {
       next: (data: Object) => {
         if (socket.readyState === WebSocket.OPEN) {
@@ -16,6 +18,7 @@ export class WebsocketService {
         }
       }
     };
+
     return Subject.create(observer, observable);
   }
 }
