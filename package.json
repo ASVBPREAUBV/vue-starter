@@ -12,6 +12,7 @@
     "@types/rx": "^4.1.1",
     "@types/ws": "^5.1.2",
     "rxjs": "^6.2.1",
+    "rxjs-compat": "^6.2.1",
     "vue": "^2.5.16",
     "vue-class-component": "^6.0.0",
     "vue-property-decorator": "^6.0.0",

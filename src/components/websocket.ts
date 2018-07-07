@@ -1,9 +1,8 @@
-import { Subject, Observer, Observable } from 'rxjs/Rx';
+import { Subject, Observer, Observable } from "rxjs/Rx";
 
 export class WebsocketService {
-
-  public createWebsocket(): Subject<MessageEvent> {
-    let socket = new WebSocket('wss://echo.websocket.org');
+  public constructor() {
+    let socket = new WebSocket("wss://echo.websocket.org");
     let observable = Observable.create((observer: Observer<MessageEvent>) => {
       socket.onmessage = observer.next.bind(observer);
       socket.onerror = observer.error.bind(observer);
@@ -18,7 +17,7 @@ export class WebsocketService {
         }
       }
     };
-
+    //
     return Subject.create(observer, observable);
   }
 }

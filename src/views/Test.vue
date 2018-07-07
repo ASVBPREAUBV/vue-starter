@@ -8,7 +8,8 @@
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
 import * as ws from "ws";
-import {WebsocketService} from '../components/websocket'
+import { WebsocketService } from "../components/websocket";
+import { Subject } from "rxjs";
 
 @Component({
   components: {}
@@ -16,11 +17,12 @@ import {WebsocketService} from '../components/websocket'
 class Test extends Vue {
   test = "";
   res = ["test1", "test2"];
+  //ws:Subject<MessageEvent>;
 
   constructor() {
     super();
     this.test = "constructor";
-
+    //this.ws = new WebsocketService();
   }
 
   bla() {}
