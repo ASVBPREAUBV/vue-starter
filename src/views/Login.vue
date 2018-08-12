@@ -1,7 +1,7 @@
 <template>
     <div>
         <h2>Login</h2>
-        <button @click="test">greet</button>
+        <button @click="run">{{test}}</button>
     </div>
 </template>
 
@@ -13,12 +13,10 @@
     })
 
     class Login extends Vue {
-
-        test=()=>{
-            console.log('test')
-        }
+        test = "test"
+        run () {
+            (this.test == 'test') ? this.test = 'not test' : this.test ='test';
+        };
     }
-
-
     export default Login;
 </script>
