@@ -1,15 +1,36 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link> |
-      <router-link to="/test">Test</router-link> |
-      <router-link to="/login">Login</router-link>
-    </div>
-    <router-view/>
-  </div>
+    <v-app>
+        <v-navigation-drawer app>
+            <router-link to="/">Home</router-link>
+            |
+            <router-link to="/about">About</router-link>
+            |
+            <router-link to="/test">Test</router-link>
+            |
+            <router-link to="/login">Login</router-link>
+        </v-navigation-drawer>
+        <v-toolbar app></v-toolbar>
+        <v-content>
+            <v-container fluid>
+                <router-view></router-view>
+            </v-container>
+        </v-content>
+        <v-footer app></v-footer>
+    </v-app>
 </template>
+<script lang="ts">
+    import 'vuetify/dist/vuetify.min.css'
 
+    import { Component, Vue } from "vue-property-decorator";
+    import HelloWorld from "@/components/HelloWorld.vue"; // @ is an alias to /src
+
+    @Component({
+        components: {
+            HelloWorld
+        }
+    })
+    export default class App extends Vue {}
+</script>
 <style lang="scss">
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
@@ -18,6 +39,7 @@
   text-align: center;
   color: #2c3e50;
 }
+
 #nav {
   padding: 30px;
   a {
