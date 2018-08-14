@@ -4,6 +4,7 @@ import Home from "./views/Home.vue";
 import About from "./views/About.vue";
 import Test from "./views/Test.vue";
 import Login from "./views/Login.vue";
+import Datetest from "./views/Datetest.vue";
 
 Vue.use(Router);
 
@@ -29,6 +30,12 @@ export default new Router({
       path: "/login",
       name: "login",
       component: Login
+    },
+
+    {
+      path: "/date",
+      name: "date",
+      component: Datetest
     }
   ]
 });

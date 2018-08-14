@@ -8,6 +8,8 @@
             <router-link to="/test">Test</router-link>
             |
             <router-link to="/login">Login</router-link>
+            |
+            <router-link to="/date">Date</router-link>
         </v-navigation-drawer>
         <v-toolbar app></v-toolbar>
         <v-content>
@@ -19,7 +21,8 @@
     </v-app>
 </template>
 <script lang="ts">
-    import 'vuetify/dist/vuetify.min.css'
+
+    //Vue.use(VueMaterial)
 
     import { Component, Vue } from "vue-property-decorator";
     import HelloWorld from "@/components/HelloWorld.vue"; // @ is an alias to /src
