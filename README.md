@@ -8,5 +8,6 @@
 ## Todo
 
  - [x] test [vuematerial](https://vuematerial.io/)
+ - [ ] build test compontent, e.g. login
  - [ ] init websocket
  
