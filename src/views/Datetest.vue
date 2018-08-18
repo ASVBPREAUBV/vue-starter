@@ -7,18 +7,18 @@
 </template>
 
 <script>
-    import Vue from 'vue'
-    import {MdDatepicker,MdButton,MdDialog} from 'vue-material/dist/components'
-    import 'vue-material/dist/vue-material.min.css'
+import Vue from "vue";
+import { MdDatepicker, MdButton, MdDialog } from "vue-material/dist/components";
+import "vue-material/dist/vue-material.min.css";
 
-    Vue.use(MdDatepicker);
-    Vue.use(MdButton);
-    Vue.use(MdDialog);
+Vue.use(MdDatepicker);
+Vue.use(MdButton);
+Vue.use(MdDialog);
 
-    export default {
-        name: 'MyLabeledDatepicker',
-        data: () => ({
-            selectedDate: null
-        })
-    }
+export default {
+  name: "MyLabeledDatepicker",
+  data: () => ({
+    selectedDate: null
+  })
+};
 </script>

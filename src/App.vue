@@ -1,16 +1,6 @@
 <template>
     <v-app>
-        <v-navigation-drawer app>
-            <router-link to="/">Home</router-link>
-            |
-            <router-link to="/about">About</router-link>
-            |
-            <router-link to="/test">Test</router-link>
-            |
-            <router-link to="/login">Login</router-link>
-            |
-            <router-link to="/date">Date</router-link>
-        </v-navigation-drawer>
+        <Navigation></Navigation>
         <v-toolbar app></v-toolbar>
         <v-content>
             <v-container fluid>
@@ -21,18 +11,19 @@
     </v-app>
 </template>
 <script lang="ts">
+//Vue.use(VueMaterial)
 
-    //Vue.use(VueMaterial)
+import { Component, Vue } from "vue-property-decorator";
+import HelloWorld from "@/components/HelloWorld.vue"; // @ is an alias to /src
+import Navigation from "@/components/Navigation.vue";
 
-    import { Component, Vue } from "vue-property-decorator";
-    import HelloWorld from "@/components/HelloWorld.vue"; // @ is an alias to /src
-
-    @Component({
-        components: {
-            HelloWorld
-        }
-    })
-    export default class App extends Vue {}
+@Component({
+  components: {
+    HelloWorld,
+    Navigation
+  }
+})
+export default class App extends Vue {}
 </script>
 <style lang="scss">
 #app {
