@@ -4,6 +4,7 @@
         <button @click="greet">greet</button>
         <p>{{ message }}</p>
         <input v-model="message">
+        {{(message=="Message") ? "Message == Message":"Message != Message" }}
     </div>
 </template>
 
