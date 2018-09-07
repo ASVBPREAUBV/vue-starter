@@ -4,7 +4,8 @@
         <button @click="greet">greet</button>
         <p>{{ message }}</p>
         <input v-model="message">
-        {{(message=="Message") ? "Message == Message":"Message != Message" }}
+        <p>{{(message=="Message") ? "message == Message":"message != Message" }}</p>
+        <p v-if="message">Now you see me</p>
     </div>
 </template>
 
@@ -27,7 +28,7 @@
         constructor() {
             super();
             this.test = "constructor";
-            this.message = "message";
+            this.message = "delete me";
             //this.ws = new WebsocketService();
         }
 
